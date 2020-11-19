@@ -9,7 +9,7 @@ function setup(){
   createCanvas(640, 480);
   //creates video below canvas
   video = createCapture(VIDEO);
-  //creates video and hides
+  //creates video and hides 
   video.hide();
   //check to see if ml5 library is working
   //console.log(ml5);
@@ -17,8 +17,6 @@ function setup(){
   poseNet = ml5.poseNet(video, modelReady);
   //when pose is detected, gotPoses function will be called
   poseNet.on('pose', gotPoses);
-  
-  
 }
 
 function gotPoses(poses){
@@ -35,7 +33,7 @@ function modelReady(){
 
 function draw(){
   background(220);
-  //draws video at (0,0)
+  //draws video at position (0,0)
   image(video, 0, 0);
   
   if(pose){
@@ -58,7 +56,7 @@ function draw(){
     for(let i = 0; i < skeleton.length; i++){
       let a = skeleton[i][0];
       let b = skeleton[i][1];
-      strokeWeight(3);
+      strokeWeight(2);
       stroke(255);
       line(a.position.x, a.position.y, b.position.x, b.position.y);
     }
