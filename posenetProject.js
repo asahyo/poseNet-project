@@ -64,7 +64,7 @@ function draw(){
     //if y position of keypoint 9, which is point for left wrist is more than 300; it will tell user to raise their hand
     //else, tell user good job for raising their left hand 
     if(pose.keypoints[9].position.y > 300) {
-      document.getElementById('yay').innerHTML = "RAISE YOU LEFT HAND HIGH!!";
+      document.getElementById('yay').innerHTML = "RAISE YOUR LEFT HAND HIGHER!!";
     }else{
       document.getElementById('yay').innerHTML = "wOw aMaZiNG GOOD JOB ^_^";
     }
