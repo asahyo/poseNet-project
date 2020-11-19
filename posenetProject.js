@@ -66,7 +66,7 @@ function draw(){
     if(pose.keypoints[9].position.y > 300) {
       document.getElementById('yay').innerHTML = "RAISE YOUR LEFT HAND HIGHER!!";
     }else{
-      document.getElementById('yay').innerHTML = "wOw aMaZiNG GOOD JOB ^_^";
+      document.getElementById('yay').innerHTML = "wOw aJu nIcE sUGOi mArAviLLosO GOOD JOB!! ^_^";
     }
   }
     
