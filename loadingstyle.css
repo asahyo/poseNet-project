@@ -1,6 +1,11 @@
+#background{
+    position: absolute;
+    top: -15%;
+}
+
 .index{
     position: absolute;
-    top: 35%;
+    top: 30%;
     left: 33%;
     float: left;
     width: 35%;
@@ -11,13 +16,13 @@
 
 #pic{
     position: absolute;
-    top: 1%;
+    top: 10%;
     left: 33%;
 }
 
 .loader{
     font-family: 'Press Start 2P';
-    font-size: 17px;
+    font-size: 25px;
     top: 30%;
     color: white;
 
@@ -45,7 +50,7 @@
     /*hides the text until animation is done*/
     opacity: 0;
     display: none;
-    transition: opacity 1s ease-in;
+    transition: opacity 0.5s ease-in;
 }
 
 .button{
