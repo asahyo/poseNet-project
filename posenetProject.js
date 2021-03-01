@@ -32,7 +32,7 @@ function modelReady(){
 }
 
 function draw(){
-  background(220);
+  background(100);
   //draws video at position (0,0)
   image(video, 0, 0);
   
@@ -49,14 +49,14 @@ function draw(){
     for(let i = 0; i < pose.keypoints.length; i++){
       let x = pose.keypoints[i].position.x;
       let y = pose.keypoints[i].position.y;
-      fill (255, 170, 180);
-      ellipse(x, y, 16, 16);
+      fill (255, 255, 255);
+      ellipse(x, y, 10, 10);
     }
     //draws a line between the x and y of each points
     for(let i = 0; i < skeleton.length; i++){
       let a = skeleton[i][0];
       let b = skeleton[i][1];
-      strokeWeight(2);
+      strokeWeight(5);
       stroke(255);
       line(a.position.x, a.position.y, b.position.x, b.position.y);
     }
