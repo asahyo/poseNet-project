@@ -1,4 +1,4 @@
-const background = document.querySelector('#background');
+//const background = document.querySelector('#background');
 const index = document.querySelector('.index');
 const main = document.querySelector('.main');
 
@@ -8,13 +8,13 @@ function init() {
     setTimeout(() => {
         index.style.opacity = 0;
         index.style.display = 'none';
-        background.style.opacity = 0;
-        background.style.display = 'none';
+        //background.style.opacity = 0;
+        //background.style.display = 'none';
 
         main.style.display = 'block';
         setTimeout(() => (main.style.opacity = 1), 50);
-    }, 4000);
+    }, 1000);
 }
-/*5700*/
+/*,4000*/
 
 init();
