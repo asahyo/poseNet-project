@@ -61,12 +61,30 @@ function draw(){
       line(a.position.x, a.position.y, b.position.x, b.position.y);
     }
     
-    //if y position of keypoint 9, which is point for left wrist is more than 300; it will tell user to raise their hand
+    //if y position of keypoint 9, which is point for left wrist is more than 240; it will tell user to raise their hand
     //else, tell user good job for raising their left hand 
-    if(pose.keypoints[9].position.y > 300) {
-      document.getElementById('pose').innerHTML = "RAISE YOUR LEFT HAND HIGHER!!";
+    if(pose.keypoints[9].position.y > 220) {
+      document.getElementById('left').innerHTML = "LEFT HAND: RAISE HIGHER!!";
+    }else if(pose.keypoints[9].position.y < 160) {
+      document.getElementById('left').innerHTML = "LEFT HAND: LOWER!!";
     }else{
-      document.getElementById('pose').innerHTML = "wOw aJu nIcE sUGOi mArAviLLosO GOOD JOB!! ^_^";
+      document.getElementById('left').innerHTML = "LEFT HAND: PERFECT";
+    }
+
+    if(pose.keypoints[10].position.y > 220) {
+      document.getElementById('right').innerHTML = "RIGHT HAND: RAISE HIGHER!!";
+    }else if(pose.keypoints[10].position.y < 160) {
+      document.getElementById('right').innerHTML = "RIGHT HAND: LOWER!!";
+    }else{
+      document.getElementById('right').innerHTML = "RIGHT HAND: PERFECT";
+    }
+
+    if(pose.keypoints[13].position.y > 340) {
+      document.getElementById('leftankle').innerHTML = "LEFT ANKLE: RAISE HIGHER!!";
+    }else if(pose.keypoints[13].position.y < 290) {
+      document.getElementById('leftankle').innerHTML = "LEFT ANKLE: LOWER!!";
+    }else{
+      document.getElementById('leftankle').innerHTML = "LEFT ANKLE: PERFECT. SUGOI. BIEN.";
     }
   }
     
